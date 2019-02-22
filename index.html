@@ -1,0 +1,21 @@
+<!--
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script type="text/javascript" src="js/diavgeia_app.js"></script>
+	<link rel="stylesheet" href="css/main.css">
+-->
+<h1>Αποφάσεις Δημοτικού Συμβουλίου</h1>
+
+<div ng-app="diavgeia_app" ng-controller="apofaseisdsCtrl">
+
+<ul id="decisionslist" >
+	<li ng-repeat='decision in resultsShown' class="decision">
+		<a class="decisionlink" href="https://diavgeia.gov.gr/{{getDecisionUrl(decision)}}" target="_blank">{{decision.subject}}</a>
+		<p class="decisiondate">Ημερομηνία δημοσίευσης: {{getDate(decision.publishTimestamp)}}</p>
+	</li>
+</ul>
+<div id="diavgeia_navigation">
+	<span id="previous" ng-click="getPreviousPage()">&lt</span> <span>{{getPageNumber()}}</span> <span id="next" ng-click="getNextPage()">&gt</span>
+</div>
+
+</div>
+

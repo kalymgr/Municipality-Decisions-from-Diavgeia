@@ -1,0 +1,23 @@
+ul#decisionslist li {
+    list-style-type:square;
+}
+
+#diavgeia_navigation{
+    text-align:center;
+
+}
+
+#diavgeia_navigation span{
+    background-color:#3591ac;
+    padding:15px;
+    color:white;
+    cursor:pointer;
+}
+#diavgeia_navigation span:hover{
+    background-color:#165e74;
+}
+
+.decisiondate{
+    color:#433d3d;
+    font-style:italic;
+}
